@@ -1,0 +1,2 @@
+["hello", "blacklist of words is a standard JSON file. To add words to it, place the words/phrases that you don't want to appear on your server in quotes and the bot will delete them",
+"Separate the words by closing the the quotes and use a comma. Delete the instructions here and replace them with the words you want banned. Feel free to add more"]

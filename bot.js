@@ -46,7 +46,7 @@ const UPDATESCHANNEL = 'CHANNELID';
 const TwitterClient = new Twitter(TwitConf);
 
 
-const stream = TwitterClient.stream('statuses/filter', {follow:'2899773086'});
+const stream = TwitterClient.stream('statuses/filter', {follow:'2899773086'}); //You can search the ID of a user through here: https://codeofaninja.com/tools/find-twitter-id/
 
 stream.on('tweet', tweet => {
     //If statement makes sure retweets from other users or replies are not included
@@ -54,7 +54,7 @@ stream.on('tweet', tweet => {
     console.log("User is not @every3minutes - tweet is a response, mention, or a retweet");
     }
     else{
-        const twitterMessage = `<@&817503409686052955> New Tweet from ${tweet.user.name} (${tweet.user,screen_name}): \nhttps://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
+        const twitterMessage = `<@&ROLEID> New Tweet from ${tweet.user.name} (${tweet.user,screen_name}): \nhttps://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
         client.channels.cache.get(UPDATESCHANNEL).send(twitterMessage);
         console.log(`${tweet.user.name} Tweet:  ${tweet.text}`);
     }
@@ -161,7 +161,7 @@ client.on('message', (message) => {
             }
             else{ 
         
-              var msg = '<@&805511221738209320> '; //ROLE ID FOR ANNOUNCEMENTS
+              var msg = '<@&ROLEID> '; //ROLE ID FOR ANNOUNCEMENTS
               console.log(args);
               for (var i = 0; i < args.length; i++){
                 msg += args[i].toString() + " ";

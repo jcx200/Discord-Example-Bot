@@ -151,11 +151,8 @@ client.on('message', (message) => {
         message.channel.send(embed);
         break;
     default:
-        if(message.content.toLowerCase().startsWith("t?")){
-            console.log("Invalid command entered");
-            message.channel.send("You have entered an invalid command! Use t?help to view bot commands");
-        }
-        else if (message.content.toLowerCase().startsWith("t?announcement")){
+        
+        if (message.content.toLowerCase().startsWith("t?announcement")){
             if (!args.length){
               return message.channel.send("Error: No arguments were provided")
             }

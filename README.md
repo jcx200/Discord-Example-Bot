@@ -4,27 +4,32 @@ I use the following code for my own Discord Bot on one of the servers I run gear
 
 
 ## What does this bot do?
-This bot was designed for formatting/posting messages rather than a user posting it themselves. This will post messages such as the server rules, role assignment messages (used with reaction-roles dependency, and will keep an eye out for banned words. This will also allow you to connect a Twitter app to allow tweets of a certain user to be sent to the server. Compared to other service that do this such as Zapier, this will update a lot faster with the messages being posted (in my case) less than a minute after tweeting. For testing purposes, the twitter account @Every3Minutes is used.
+This bot was designed for formatting/posting messages rather than a user posting it themselves. Some example slash commands have been added as well as an example of prefixed commands.
 
-The reaction roles function uses the format I use for my server. Feel free to change them to your liking.
+The bot will also allow you to connect a Twitter app to allow tweets of a certain user to be sent to the server. Compared to other services that do this such as Zapier, this will update a lot faster with the messages being posted (in my case) less than a minute after tweeting.
 
 ## Dependancies
-Run the following to install the needed packages (npm has been used for this process)
+This bot was buildt on NodeJS version 16.15.0. I cannot verify if it works on other versions.
+If using the included package.json file, you can install required packages using.
 
-`npm i discord.js`
+> npm i 
 
-`npm i dotenv`
+OR
 
-`npm i reaction-role`
-
-`npm i twit`
+> npm i -S
 
 This bot currently works on the following dependency versions
 
-> discord.js: 12.5.1
+>"@discordjs/builders": "^0.13.0"
 
-> dotenv: 8.2.0
+> "@discordjs/rest": "^0.4.1"
+   
+> "concurrently": "^7.2.1"  
 
-> reaction-role: 4.1.0
+> "discord-api-types": "^0.30.0"
 
-> twit: 2.2.11
+> "discord.js": "^13.7.0"
+
+> "dotenv": "^8.2.0"
+
+> "twit": "^2.2.11"
